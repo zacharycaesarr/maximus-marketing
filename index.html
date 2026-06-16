@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maximus Marketing — Zachary Hitson</title>
+  <meta name="description" content="Zachary Hitson | Maximus Marketing — Digital Growth, Web Development, Ad Management">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,900&family=Inter:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- GSAP (Animation Engine) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Ambient Blob Backgrounds -->
+  <div class="blob-wrap" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- ─── HEADER ─────────────────────────────── -->
+  <header class="header">
+    <div class="hdr-status">
+      <span class="hdr-dot"></span>
+      <span>Available for projects</span>
+    </div>
+    <div class="hdr-brand">MM</div>
+  </header>
+
+  <!-- ─── HERO ────────────────────────────────── -->
+  <section class="hero">
+
+    <!-- Logo Badge -->
+    <div class="logo-wrap" id="logo-wrap">
+      <div class="logo-card" id="logo-card">
+        <img src="assets/logo.png" alt="Maximus Marketing Logo" class="logo-img">
+        <div class="logo-shine"></div>
+      </div>
+      <div class="logo-r r1"></div>
+      <div class="logo-r r2"></div>
+      <div class="logo-r r3"></div>
+    </div>
+
+    <!-- Copy -->
+    <div class="hero-copy">
+      <p class="hero-by" id="hero-by">ZACHARY HITSON</p>
+
+      <h1 class="hero-h" id="hero-h">
+        <span class="h-line" id="hl1"><span class="h-word">MAXIMUS</span></span>
+        <span class="h-line" id="hl2"><span class="h-word italic">MARKETING</span></span>
+      </h1>
+
+      <div class="hero-svc" id="hero-svc">
+        <span class="svc">Digital Growth</span>
+        <span class="svc-sep">·</span>
+        <span class="svc">Web Development</span>
+        <span class="svc-sep">·</span>
+        <span class="svc">Ad Management</span>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-hint" id="scroll-hint">
+      <span class="sh-text">SCROLL</span>
+      <span class="sh-line"><span class="sh-fill"></span></span>
+    </div>
+
+  </section>
+
+  <!-- ─── CONTACT ──────────────────────────────── -->
+  <section class="contact">
+
+    <div class="ct-intro">
+      <p class="ct-label" id="ct-label">— GET IN TOUCH —</p>
+      <h2 class="ct-h" id="ct-h">Let's build<br><em>something</em> great</h2>
+    </div>
+
+    <div class="cards" id="cards">
+
+      <!-- Email Card -->
+      <a href="mailto:zacharymhits@gmail.com" class="card" id="card-em">
+        <div class="card-spot"></div>
+        <div class="card-top">
+          <div class="card-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2.5"/>
+              <path d="M2 7.5l8.94 5.63a2 2 0 002.12 0L22 7.5"/>
+            </svg>
+          </div>
+          <span class="card-lbl">Email</span>
+        </div>
+        <div class="card-val">zacharymhits<br>@gmail.com</div>
+        <div class="card-action">
+          <span>Send a message</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Phone Card -->
+      <a href="tel:+15404162983" class="card" id="card-ph">
+        <div class="card-spot"></div>
+        <div class="card-top">
+          <div class="card-ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.8 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006.72 6.72l1.69-1.69a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <span class="card-lbl">Phone</span>
+        </div>
+        <div class="card-val">(540)<br>416-2983</div>
+        <div class="card-action">
+          <span>Give me a call</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Bottom tagline -->
+    <p class="ct-tagline" id="ct-tagline">Digital Growth · Web Development · Ad Management</p>
+
+  </section>
+
+  <!-- ─── FOOTER ──────────────────────────────── -->
+  <footer class="footer">
+    <span>© 2026 Maximus Marketing</span>
+    <span class="ft-dot">·</span>
+    <span>Zachary Hitson</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
