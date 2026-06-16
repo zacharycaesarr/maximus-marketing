@@ -104,10 +104,10 @@ class Particle {
   init() {
     this.x       = Math.random() * W;
     this.y       = Math.random() * H;
-    this.sz      = Math.random() * 1.4 + 0.4;
+    this.sz      = Math.random() * 1.6 + 0.5;
     this.vx      = (Math.random() - 0.5) * 0.38;
     this.vy      = (Math.random() - 0.5) * 0.38;
-    this.alpha   = Math.random() * 0.22 + 0.04;
+    this.alpha   = Math.random() * 0.28 + 0.08;
     this.life    = Math.random() * 260 + 140;
     this.maxLife = this.life;
   }
@@ -161,8 +161,8 @@ function drawConnections() {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(44,37,32,${(1 - d / 110) * 0.09})`;
-        ctx.lineWidth = 0.6;
+        ctx.strokeStyle = `rgba(44,37,32,${(1 - d / 110) * 0.15})`;
+        ctx.lineWidth = 0.75;
         ctx.stroke();
       }
     }
