@@ -141,7 +141,7 @@ body::after {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
   transition: transform 0.15s var(--ease-out), opacity 0.2s;
   will-change: transform;
 }
